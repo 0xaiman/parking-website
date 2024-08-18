@@ -1,0 +1,43 @@
+{
+    "groundParkingSpots": [
+      { "spot": "GA", "taken": false },
+      { "spot": "GB", "taken": true },
+      { "spot": "GC", "taken": false },
+      { "spot": "GD", "taken": true },
+      { "spot": "GE", "taken": false },
+      { "spot": "GF", "taken": false }
+    ],
+    "oneParkingSpots": [
+      { "spot": "1A", "taken": false },
+      { "spot": "1B", "taken": true },
+      { "spot": "1C", "taken": false },
+      { "spot": "1D", "taken": false },
+      { "spot": "1E", "taken": true },
+      { "spot": "1F", "taken": false }
+    ],
+    "twoParkingSpots": [
+      { "spot": "2A", "taken": true },
+      { "spot": "2B", "taken": false },
+      { "spot": "2C", "taken": true },
+      { "spot": "2D", "taken": false },
+      { "spot": "2E", "taken": false },
+      { "spot": "2F", "taken": true }
+    ],
+    "threeParkingSpots": [
+      { "spot": "3A", "taken": false },
+      { "spot": "3B", "taken": true },
+      { "spot": "3C", "taken": false },
+      { "spot": "3D", "taken": false },
+      { "spot": "3E", "taken": true },
+      { "spot": "3F", "taken": false }
+    ],
+    "fourParkingSpots": [
+      { "spot": "4A", "taken": true },
+      { "spot": "4B", "taken": false },
+      { "spot": "4C", "taken": true },
+      { "spot": "4D", "taken": false },
+      { "spot": "4E", "taken": false },
+      { "spot": "4F", "taken": true }
+    ]
+  }
+  

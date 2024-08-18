@@ -1,0 +1,92 @@
+<div class="p-8 bg-white border rounded shadow-sm">
+  <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+    <a
+      href="/"
+      class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+      aria-label="Category"
+      >weekend</a
+    >
+    <span class="text-gray-600">— 1 Feb 2020</span>
+  </p>
+  <a
+    href="/"
+    aria-label="Article"
+    class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+    >Parking Spots</a
+  >
+  <!-- ground parking spots -->
+  <div id="ground-parking-spot" class="my-2">
+    <h1 class="inline-block mb-3 text-xl font-bold leading-5 text-black">
+      Ground Level
+    </h1>
+    <div class="flex flex-wrap gap-1">
+      <span
+        *ngFor="let spotsData of groundParkingSpots"
+        class="px-8 py-2 border border-black"
+        [ngClass]="{ 'bg-red-500 text-white': spotsData.taken }"
+      >
+        {{ spotsData.spot }}
+      </span>
+    </div>
+  </div>
+  <!-- level 1 parking spots -->
+  <div id="level-one-parking-spot" class="my-2">
+    <h1 class="inline-block mb-3 text-xl font-bold leading-5 text-black">
+      Level 1
+    </h1>
+    <div class="flex flex-wrap gap-1">
+      <span
+        *ngFor="let spotsData of oneParkingSpots"
+        class="px-8 py-2 border border-black"
+        [ngClass]="{ 'bg-red-500 text-white': spotsData.taken }"
+      >
+        {{ spotsData.spot }}
+      </span>
+    </div>
+  </div>
+  <!-- level 2 parking spots -->
+  <div id="level-two-parking-spot" class="my-2">
+    <h1 class="inline-block mb-3 text-xl font-bold leading-5 text-black">
+      Level 2
+    </h1>
+    <div class="flex flex-wrap gap-1">
+      <span
+        *ngFor="let spotsData of twoParkingSpots"
+        class="px-8 py-2 border border-black"
+        [ngClass]="{ 'bg-red-500 text-white': spotsData.taken }"
+      >
+        {{ spotsData.spot }}
+      </span>
+    </div>
+  </div>
+  <!-- level 3 parking spots -->
+  <div id="level-three-parking-spot" class="my-2">
+    <h1 class="inline-block mb-3 text-xl font-bold leading-5 text-black">
+      Level 3
+    </h1>
+    <div class="flex flex-wrap gap-1">
+      <span
+        *ngFor="let spotsData of threeParkingSpots"
+        class="px-8 py-2 border border-black"
+        [ngClass]="{ 'bg-red-500 text-white': spotsData.taken }"
+      >
+        {{ spotsData.spot }}
+      </span>
+    </div>
+  </div>
+  <!-- level 4 parking spots -->
+  <div id="level-four-parking-spot" class="my-2">
+    <h1 class="inline-block mb-3 text-xl font-bold leading-5 text-black">
+      Level 4
+    </h1>
+    <div class="flex flex-wrap gap-1">
+      <span
+        *ngFor="let spotsData of threeParkingSpots"
+        class="px-8 py-2 border border-black"
+        [ngClass]="{ 'bg-red-500 text-white': spotsData.taken }"
+      >
+        {{ spotsData.spot }}
+      </span>
+    </div>
+  </div>
+</div>

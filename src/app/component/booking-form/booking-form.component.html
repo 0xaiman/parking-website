@@ -1,0 +1,120 @@
+<div class="p-8 bg-white border rounded shadow-sm">
+  <p class="mb-3 text-xs font-semibold tracking-wide uppercase">
+    <a
+      href="/"
+      class="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+      aria-label="Category"
+      >weekend</a
+    >
+    <span class="text-gray-600">— 1 Feb 2020</span>
+  </p>
+  <a
+    href="/"
+    aria-label="Article"
+    title="Jingle Bells"
+    class="inline-block mb-3 text-2xl font-bold leading-5 text-black transition-colors duration-200 hover:text-deep-purple-accent-400"
+    >Start Booking</a
+  >
+
+  <form [formGroup]="applyForm" (ngSubmit)="submitApplication()">
+    <div class="mb-4 flex flex-row gap-4">
+      <div>
+        <label for="parkingPlan" class="block text-sm font-medium text-gray-700"
+          >Select Plan</label
+        >
+        <select
+          id="parkingPlan"
+          formControlName="parkingPlan"
+          name="plan"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+        >
+          <option value="" class="text-gray-700">
+            Select Your Parking Plan
+          </option>
+          <option *ngFor="let plan of parkingPlan" [value]="plan">
+            {{ plan }}
+          </option>
+        </select>
+      </div>
+
+      <!-- Phone Number -->
+      <div>
+        <label for="parkingNumber">Parking Number</label>
+        <input
+          formControlName="parkingNumber"
+          id="parkingNumber"
+          type="text"
+          class="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+        />
+      </div>
+    </div>
+
+    <!-- full name -->
+    <div class="mb-4">
+      <label for="fullName">Full Name</label>
+      <input
+        formControlName="fullName"
+        id="fullName"
+        type="text"
+        class="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+      />
+    </div>
+
+    <div class="mb-4 flex flex-row gap-4">
+      <!-- EMail -->
+      <div class="mb-4">
+        <label for="email">Email</label>
+        <input
+          formControlName="email"
+          id="email"
+          type="email"
+          class="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+        />
+      </div>
+      <!-- Phone Number -->
+      <div>
+        <label for="phoneNumber">Phone Number</label>
+        <input
+          formControlName="phoneNumber"
+          id="phoneNumber"
+          type="tel"
+          class="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+        />
+      </div>
+    </div>
+
+    <div>
+      <label for="carBrand" class="block text-sm font-medium text-gray-700"
+        >Select Make</label
+      >
+      <select
+        id="carBrand"
+        formControlName="carBrand"
+        name="plan"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+      >
+        <option value="" class="text-gray-700">Select Your Car Make</option>
+        <option *ngFor="let brand of carBrandsList" [value]="brand">
+          {{ brand }}
+        </option>
+      </select>
+    </div>
+
+    <div class="mb-4">
+      <label for="plateNumber">Plate Number</label>
+      <input
+        formControlName="plateNumber"
+        id="plateNumber"
+        type="text"
+        class="mt-1 block w-full px-3 py-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+    >
+      Submit Booking
+    </button>
+  </form>
+</div>

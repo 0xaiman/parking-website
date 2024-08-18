@@ -46,7 +46,7 @@ export class BookingFormComponent {
     const formData = this.applyForm.value;
 
     this.http
-      .post(`${this.apiUrl}/submit-booking`, formData)
+      .post(`https://parking-server.vercel.app/submit-booking`, formData)
       .pipe(
         catchError((error) => {
           console.error('Error occurred:', error);

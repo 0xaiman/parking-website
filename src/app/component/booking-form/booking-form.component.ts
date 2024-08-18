@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { catchError, of } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-booking-form',
@@ -12,6 +13,8 @@ import { catchError, of } from 'rxjs';
   styleUrl: './booking-form.component.css',
 })
 export class BookingFormComponent {
+  private apiUrl = environment.apiUrl;
+
   applyForm = new FormGroup({
     parkingPlan: new FormControl(''),
     parkingNumber: new FormControl(''),
@@ -43,7 +46,7 @@ export class BookingFormComponent {
     const formData = this.applyForm.value;
 
     this.http
-      .post('http://localhost:3000/submit-booking', formData)
+      .post(`${this.apiUrl}/submit-booking`, formData)
       .pipe(
         catchError((error) => {
           console.error('Error occurred:', error);
